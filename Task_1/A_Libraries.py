@@ -4,3 +4,4 @@ import matplotlib.pyplot as plt
 from pylab import *
 from PIL import Image
 import os
+import cv2
