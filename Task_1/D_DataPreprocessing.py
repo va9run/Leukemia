@@ -1,7 +1,10 @@
 from Task_1.A_Libraries import *
+from Task_1.A1_path import *
 from Task_1.C_DataImport import dataImport
 
-def load_images_labels_from_df(df, img_size):
+def load_images_labels_from_df(path, pathType, img_size):
+
+    df = dataImport(path,pathType)
     images = []
     labels = []
     
@@ -31,7 +34,6 @@ def load_images_labels_from_df(df, img_size):
     augmentation.fit(images)
     augmentedImage_generator = augmentation.flow(images, labels, batch_size=32)
 
-    return augmentedImage_generator
-
+    return augmentedImage_generator, len(images)
 
 # different fill_mode: 1) nearest 2)constant 3)reflect 4)wrap
