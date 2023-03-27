@@ -44,4 +44,4 @@ def load_images_labels_from_df(path, pathType, img_size):
     augmentedImage_generator = augmentation.flow(cropped_images, labels, batch_size=32)
 
 
-    return augmentedImage_generator, len(images)
+    return augmentedImage_generator, len(cropped_images)
