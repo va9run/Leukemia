@@ -1,7 +1,7 @@
-from Task_1.A_Libraries import *
-from Task_1.C_DataImport import dataImport
-from Task_2.A_data_preProcessing import load_images_labels_from_df
-from Task_1.A1_path import *
+from Model_1.A_Libraries import *
+from Model_1.C_DataImport import dataImport
+from Model_2.A_data_preProcessing import load_images_labels_from_df
+from Model_1.A1_path import *
 
 def basicModel(trainPath,trainingPathType,validationPath,validationPathType,imageSize):
     training_generator,training_images = load_images_labels_from_df(trainPath,trainingPathType,imageSize)

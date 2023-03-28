@@ -1,6 +1,6 @@
-from Task_1.A_Libraries import *
-from Task_1.A1_path import *
-from Task_1.C_DataImport import dataImport
+from Model_1.A_Libraries import *
+from Model_1.A1_path import *
+from Model_1.C_DataImport import dataImport
 
 def load_images_labels_from_df(path, pathType, img_size):
 

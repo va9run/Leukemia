@@ -1,4 +1,4 @@
-from Task_1.A_Libraries import *
+from Model_1.A_Libraries import *
 
 def histeq(im, nbr_bins=255):
     imhist,bins = histogram(im.flatten(), nbr_bins, normed=True)
