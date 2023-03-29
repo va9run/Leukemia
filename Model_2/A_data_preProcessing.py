@@ -28,16 +28,15 @@ def load_images_labels_from_df(path, pathType, img_size):
         cropped_images.append(cropped_image)
 
     cropped_images = np.array(cropped_images)
-
+    
     augmentation = preprocessing.image.ImageDataGenerator(
-                                                        rotation_range=20, # image rotation range
-                                                        width_shift_range=20, # horizontal shift during augmentation
-                                                        height_shift_range=20, # vertical shift during augmentation
-                                                        shear_range=20, # shear angle shift during augmentation
-                                                        zoom_range=20, # image zoom-in or out during augmentation
+                                                        rotation_range=50, # image rotation range
+                                                        width_shift_range=0.2, # horizontal shift during augmentation
+                                                        height_shift_range=0.2, # vertical shift during augmentation
+                                                        shear_range=0, # shear angle shift during augmentation
+                                                        zoom_range=0.2, # image zoom-in or out during augmentation
                                                         horizontal_flip=True, 
-                                                        fill_mode='nearest', # how to fill empty spaces created during augmentation*
-                                                        vertical_flip=True
+                                                        fill_mode='nearest' # how to fill empty spaces created during augmentation*
                                                     )
     
     augmentation.fit(cropped_images)
