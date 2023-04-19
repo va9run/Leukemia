@@ -1,5 +1,5 @@
 from skimage import exposure
-from tensorflow.keras.preprocessing.image import img_to_array, array_to_img
+from keras.preprocessing.image import img_to_array, array_to_img
 
 def img_cont(img):
     img = img_to_array(img)  # Convert the image to a numpy array
